@@ -126,3 +126,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'dashboard'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'israaacolin@gmail.com'
+EMAIL_HOST_PASSWORD = 'llqc qxqd dmtu htbk'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
