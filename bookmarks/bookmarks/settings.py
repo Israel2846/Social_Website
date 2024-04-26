@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$()70^xg97^$v1**=$#xmh96f38!r9!36$!car+##t-q)$b+7n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,16 @@ EMAIL_USE_TLS = True
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+]
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1476099469668830'
+SOCIAL_AUTH_FACEBOOK_SECRET = '1306bbd95fae1bc86bd3b68a7b4abe3e'
+SOCIAL_AUTH_FACEBBOK_SCOPE = ['email']
+
+SOCIAL_AUTH_TWITTER_KEY = '5fyznI5MIoxCXI6r0voMAGj60'
+SOCIAL_AUTH_TWITTER_SECRET = 'eXaqhLkdYJ2y5eMw87DbWNfn6zCNsvu5nM2iuD7R8sTTC8DAQ3'
